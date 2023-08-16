@@ -17,6 +17,6 @@ public class Workstation {
     private String name;
 
     @JsonBackReference
-    @OneToOne(mappedBy = "workstation")
-    private Employee employee;
+    @OneToOne(mappedBy = "workstation") //mappedBy para indicar que a entidade employee que contem o atributo workstation é o owner do relacionamento
+    private Employee employee; //necessario o mapeamento da outra entidade se for um relacionamento bidirecional
 }
