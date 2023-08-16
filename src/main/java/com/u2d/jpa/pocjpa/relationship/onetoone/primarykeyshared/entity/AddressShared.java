@@ -18,7 +18,7 @@ public class AddressShared {
     private String street;
 
     @JsonManagedReference
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @MapsId//indica que os valores da primary key serão copiados da entidade UsersShared
     @JoinColumn(name = "user_id")
     private UsersShared usersShared;//necessario o mapeamento da outra entidade se for um relacionamento bidirecional e primarykey shared

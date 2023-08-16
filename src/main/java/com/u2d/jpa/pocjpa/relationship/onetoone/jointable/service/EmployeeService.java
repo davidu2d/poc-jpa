@@ -1,6 +1,7 @@
 package com.u2d.jpa.pocjpa.relationship.onetoone.jointable.service;
 
 import com.u2d.jpa.pocjpa.relationship.onetoone.jointable.entity.Employee;
+import com.u2d.jpa.pocjpa.relationship.onetoone.jointable.entity.Workstation;
 import com.u2d.jpa.pocjpa.relationship.onetoone.jointable.repository.Employee2Repository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,10 +12,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EmployeeService {
     private final Employee2Repository employee2Repository;
-    private final WorkstationService workstationService;
 
     public Employee create(){
-        var workstation = workstationService.create();
+        Workstation workstation = new Workstation();
+        workstation.setName("baia 1");
+
         Employee employee = new Employee();
         employee.setName("david");
         employee.setWorkstation(workstation);
