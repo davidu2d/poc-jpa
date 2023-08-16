@@ -20,6 +20,6 @@ public class UsersShared {
 
     @JsonBackReference
     @OneToOne(mappedBy = "usersShared", cascade = CascadeType.ALL) //mappedBy indica que a entidade addressShared que contem o atributo usersShared é o owner do relacionamento e contem a foreignkey
-    @PrimaryKeyJoinColumn //indica que a primarykey da entidade UsersShared é usada como valor da foreignkey para a entidade AddressShared associada
+    @PrimaryKeyJoinColumn //indica que a primarykey da entidade UsersShared é usada como valor da foreignkey e primarykey para a entidade AddressShared associada
     private AddressShared addressShared;
 }
