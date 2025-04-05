@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 @MappedSuperclass
-@Table(name = "person_mapped")
+//@Table(name = "person_mapped")
 public class PersonMapped {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
